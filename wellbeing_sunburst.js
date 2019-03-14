@@ -32,18 +32,13 @@ var arc = d3.svg.arc()
     .innerRadius(function(d) { return Math.sqrt(d.y); })
     .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });
 
-// Use d3.text and d3.csv.parseRows so that we do not need to have a header
-// row, and can receive the csv as an array of arrays.
-d3.text("well-being-indicators.csv", function(text) {
+d3.text("data/well-being-indicators.csv", function(text) {
   var csv = d3.csv.parseRows(text);
   var json = buildWellbeingHierarchy(csv);
   createVisualization(json);
 });
 
-// Main function to draw and set up the visualization, once we have the data.
 function createVisualization(json) {
-
-  // Basic setup of page elements.
   initializeBreadcrumbTrail();
 
   // Bounding circle underneath the sunburst, to make it easier to detect
@@ -64,7 +59,6 @@ function createVisualization(json) {
       .attr("display", function(d) { return d.depth ? null : "none"; })
       .attr("d", arc)
       .attr("fill-rule", "evenodd")
-      //.style("fill", function(d) { return colors[d.name]; })
       .style("fill", function (d) { return colors((d.children ? d : d.parent).name); })
       .style("opacity", 1)
       .on("mouseover", mouseover);
@@ -78,7 +72,6 @@ function createVisualization(json) {
 
 // Fade all but the current sequence, and show it in the breadcrumb trail.
 function mouseover(d) {
-
   d3.select("#explanation")
       .style("visibility", "");
 
