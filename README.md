@@ -7,7 +7,7 @@ A Sunburst is a data visualization technique which is useful when working with h
 Let's say that you're curious about Sunlight.
 > Sunlight is a portion of the electromagnetic radiation given off by the Sun, in particular infrared, visible, and ultraviolet light. (Source: [Wikipedia](https://en.wikipedia.org/wiki/Sunlight))
 
-You go on to read about the [electromagnetic radiation](https://imagine.gsfc.nasa.gov/science/toolbox/emspectrum1.html) and decide to use a sunburst diagram to visualize part of the Electromagnetic Spectrum. First, you need to create the Excel csv file. For this example, we'll use the `data/sunburst_em.csv':
+You go on to read about [electromagnetic radiation](https://imagine.gsfc.nasa.gov/science/toolbox/emspectrum1.html) and decide to use a sunburst diagram to visualize part of the Electromagnetic Spectrum. First, you need to create the Excel csv file. For this example, we'll use the `data/sunburst_em.csv`:
 
 Type of EM | Where you encounter it | Wavelength
 ------------ | ------------- | -------------
