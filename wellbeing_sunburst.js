@@ -32,7 +32,7 @@ var arc = d3.svg.arc()
     .innerRadius(function(d) { return Math.sqrt(d.y); })
     .outerRadius(function(d) { return Math.sqrt(d.y + d.dy); });
 
-d3.text("data/well-being-indicators.csv", function(text) {
+d3.text("data/happiness-index-indicators.csv", function(text) {
   var csv = d3.csv.parseRows(text);
   var json = buildWellbeingHierarchy(csv);
   createVisualization(json);
