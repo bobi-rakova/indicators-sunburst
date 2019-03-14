@@ -46,6 +46,6 @@ That's all you need to do:
 ![A Sunburst of the Electromagnetic Spectrum](/img/sunburst_em.png)
 
 When visualizing large amounts of data, it is much easier if you omit the labels. In that case, you could show the label only when the user interacts with the plot and hovers over a specific cell in the sunburst. You can do that by using the `wellbeing_sunburst.js` code template. You might need to adjust its size depending on the size of the data you provide. In the screenshot below the provided raw csv file contained 131 rows and the user has selected a specific one. They are then able to see the details for the selected raw in the center of the sunburst:
-![A Sunburst with details in the center](/img/sewlected.png)
+![A Sunburst with details in the center](/img/selected.png)
 
 ## Thank You!
