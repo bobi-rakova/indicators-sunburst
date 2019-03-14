@@ -32,7 +32,7 @@ For now you provide wavelength data only for the Solar Spectrum(Sunlight) catego
 By looking at the `index.html`, you can see that it loads a javascript file which has the [d3](https://d3js.org/) code for the sunburst visualization: `<script type="text/javascript" src="demo_sunburst.js"></script>`
 
 ## D3
-You might want to change the dimensions of your sunburst diagram depending on your data. These are defined at the very top of the `demo_sunburst.js` script. You could also decide wether or not you want to provide labels for the cells of the sunburst. This repository contains two examples, one with labels(`demo_sunburst.js`) and one without them(`wellbeing_sunburst.js`). For this example we'll add labels and we'll specify that we want to crop the text, so that it appears on multiple lines instead of a single line. You might need to adjust the maximum length of the cropped text by using the `function wrap(text, width)` function call and providing the desired width. For the demo, we've specified the width as follows:
+You might want to change the dimensions of your sunburst diagram depending on your data. These are defined at the very top of the `demo_sunburst.js` script. You could also decide wether or not you want to provide labels for the cells of the sunburst. This repository contains two examples, one with labels(`demo_sunburst.js`) and one without them(`interactive_sunburst.js`). For this example we'll add labels and we'll specify that we want to crop the text, so that it appears on multiple lines instead of a single line. You might need to adjust the maximum length of the cropped text by using the `function wrap(text, width)` function call and providing the desired width. For the demo, we've specified the width as follows:
 
 ```javascript
   var text = g.append("text")
@@ -45,7 +45,7 @@ You might want to change the dimensions of your sunburst diagram depending on yo
 That's all you need to do:
 ![A Sunburst of the Electromagnetic Spectrum](/img/sunburst_em.png)
 
-When visualizing large amounts of data, it is much easier if you omit the labels. In that case, you could show the label only when the user interacts with the plot and hovers over a specific cell in the sunburst. You can do that by using the `wellbeing_sunburst.js` code template. You might need to adjust its size depending on the size of the data you provide. In the screenshot below the provided raw csv file contained 131 rows and the user has selected a specific one. They are then able to see the details for the selected raw in the center of the sunburst:
-![A Sunburst with details in the center](/img/selected.png)
+When visualizing large amounts of data, it is much easier if you omit the labels. In that case, you could show the label only when the user interacts with the plot and hovers over a specific cell in the sunburst. You can do that by using the `interactive_sunburst.js` code template. You might need to adjust its size depending on the size of the data you provide. In the screenshot below the provided raw csv file contained 131 rows and the user has selected a specific one. They are then able to see the details for the selected raw in the center of the sunburst:
+![A Sunburst with details in the center](/img/interactive.png)
 
 ## Thank You!
